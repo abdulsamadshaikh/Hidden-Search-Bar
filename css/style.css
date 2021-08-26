@@ -1,0 +1,81 @@
+/*  
+Project Name: Hidden Search Bar
+Description: This is the sleek and clean Hidden Search Bar widget. Give me a thumbs-up, If you like it. Enjoy!
+Author: Abdul Samad
+Author URI: https://getabdulsamad.com/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: transparent linear-gradient(91deg, #75fabd 0%, #75fabd 100%);
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.search-box {
+  position: relative;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.search-box.active {
+  -webkit-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.search-box .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 80px;
+  width: 80px;
+  transition: width 0.3s ease;
+}
+
+.search-btn {
+  background-color: #fff;
+  border: 0;
+  font-size: 36px;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transfrom 0.3s ease;
+}
+
+.search-btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search-box.active .input {
+  width: 260px;
+}
+
+.search-box.active .search-btn {
+  position: unset;
+}
